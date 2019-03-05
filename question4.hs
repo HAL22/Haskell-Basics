@@ -9,11 +9,9 @@ safetail_1 xs = if null xs then []
 --2
 	
 safetail_2:: [a] -> [a]
-safetail_2 [] = []
-safetail_2 xs = tail xs
+safetail_2 xs | null xs = [] | otherwise = tail xs
 
 --3
-
 safetail_3:: [a] -> [a]
 safetail_3 [] = []
-safetail_3 (x:xs) = xs
+safetail_3 xs = tail xs
